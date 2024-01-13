@@ -1,0 +1,29 @@
+#calculator {
+  margin: auto;
+  padding: 8px;
+  border: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+#display {
+  box-sizing: border-box;
+  width: 256px;
+  text-align: end;
+  font-size: 28px;
+  border: 1px solid;
+}
+
+.row {
+  display: flex;
+}
+
+#clear {
+  width: 192px;
+}
+
+button {
+  box-sizing: border-box;
+  width: 64px;
+  height: 64px;
+}
