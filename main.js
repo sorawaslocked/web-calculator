@@ -5,6 +5,14 @@ let leftNumber = "";
 let rightNumber = "";
 let operator = "";
 
+console.log(digitBtns);
+
+digitBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    rightNumber += btn.textContent;
+    display.textContent = leftNumber + operator + rightNumber;
+  });
+});
 
 operate = {
   "+": (a, b) => a + b,
