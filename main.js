@@ -7,10 +7,23 @@ let operator = "";
 
 console.log(digitBtns);
 
+function changeDisplay() {
+  display.textContent = leftNumber + operator + rightNumber;
+}
+
 digitBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    rightNumber += btn.textContent;
-    display.textContent = leftNumber + operator + rightNumber;
+    leftNumber += btn.textContent;
+    changeDisplay();
+  });
+});
+
+operatorBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (operator === "") {
+      operator = btn.textContent;
+      changeDisplay();
+    }
   });
 });
 
